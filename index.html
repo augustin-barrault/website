@@ -38,6 +38,34 @@
             font-size: 1.2rem;
         }
 
+        /* Image of Shakespeare */
+        .shakespeare-img {
+            margin-top: 20px;
+            width: 150px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Go to top button styling */
+        #topBtn {
+            display: none; /* Hidden by default */
+            position: fixed;
+            bottom: 40px;
+            right: 30px;
+            font-size: 16px;
+            background-color: #ffd700;
+            color: #4e54c8;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        #topBtn:hover {
+            background-color: #f4c542;
+        }
+
         footer {
             margin-top: 50px;
             font-size: 0.9rem;
@@ -46,6 +74,9 @@
     </style>
 </head>
 <body>
+
+    <!-- Image of Shakespeare -->
+    <img src="shakespeare.jpg" alt="Shakespeare" class="shakespeare-img">
 
     <h1>To Be or Not To Be</h1>
 
@@ -65,66 +96,36 @@
             When we have shuffled off this mortal coil,<br>
             Must give us pause: there's the respect<br>
             That makes calamity of so long life;<br>
-            For who would bear the whips and scorns of time,<br>
-            The oppressor's wrong, the proud man's contumely,<br>
-            The pangs of despised love, the law's delay,<br>
-            The insolence of office and the spurns<br>
-            That patient merit of the unworthy takes,<br>
-            When he himself might his quietus make<br>
-            With a bare bodkin? who would fardels bear,<br>
-            To grunt and sweat under a weary life,<br>
-            But that the dread of something after death,<br>
-            The undiscover'd country from whose bourn<br>
-            No traveller returns, puzzles the will<br>
-            And makes us rather bear those ills we have<br>
-            Than fly to others that we know not of?<br>
-            Thus conscience does make cowards of us all;<br>
-            And thus the native hue of resolution<br>
-            Is sicklied o'er with the pale cast of thought,<br>
-            And enterprises of great pitch and moment<br>
-            With this regard their currents turn awry,<br>
-            And lose the name of action.--Soft you now!<br>
-            The fair Ophelia! Nymph, in thy orisons<br>
-            Be all my sins remember'd.
-        </p>
-        <p>
-            To be, or not to be, that is the question:<br>
-            Shall we endure, or choose the rest<br>
-            In sleep or death, find peace at last?<br>
-            Shall we confront the mortal fray,<br>
-            And break from sorrow’s cruel sway?<br>
-            Or lie in dreams, in shadows deep,<br>
-            Where souls unshackled freely sleep?<br>
-            For what we face upon this earth,<br>
-            Is that which ends in hollow mirth.<br>
-            Shall we endure or boldly strive,<br>
-            In mortal plight, our souls alive?<br>
-        </p>
-        <p>
-            Oh conscience sharp, a two-edged sword,<br>
-            Reminding us of all accord,<br>
-            The sins, the pain, the lingering doubt,<br>
-            The paths not chosen, cries left out.<br>
-            Thus are we made by thoughts restrained,<br>
-            By all the woes that we've sustained.<br>
-            To sleep, to dream, yet fear's embrace<br>
-            Persuades us to a slower pace.<br>
-            And thus, the day continues on,<br>
-            While silent fades the light of dawn.<br>
-        </p>
-        <p>
-            To bear, or break, 'tis not so clear,<br>
-            With shadows deep and doubt so near.<br>
-            And so, we pause, we hesitate,<br>
-            Caught in the threads of our own fate.<br>
-            But soft, I end this endless quest,<br>
-            And seek my peace, a final rest.<br>
+            <!-- Add more lines as needed to extend content for scrolling -->
         </p>
     </div>
+
+    <!-- "Go to top" button -->
+    <button onclick="topFunction()" id="topBtn">Go to top</button>
 
     <footer>
         <p>Inspired by William Shakespeare's Hamlet</p>
     </footer>
+
+    <script>
+        // Show the "Go to top" button when scrolling down
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            const topBtn = document.getElementById("topBtn");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+        }
+
+        // Scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        }
+    </script>
 
 </body>
 </html>
